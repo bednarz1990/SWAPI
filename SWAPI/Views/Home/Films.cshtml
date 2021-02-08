@@ -1,0 +1,29 @@
+﻿@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model SWAPI.ViewModels.FilmViewModel
+
+<h1>Films</h1>
+@*<select  name="Title" asp-items="@(new SelectList(Model.Results, "Episode_Id", "Title"))" size="9" class="form-control" onchange="onSelectedIndexChanged(this)"></select>*@
+@*<select name="listbox" id="listbox">
+    @foreach (var item in Model.Results)
+    {
+        <option value="@item.Episode_Id">
+            @item.Title
+        </option>
+    }
+</select>*@
+
+
+@foreach (var item in Model.Results)
+{
+    <table>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", item) |
+                @Html.ActionLink("Rate", "Rank", item)
+            </td>
+        </tr>
+    </table>
+}

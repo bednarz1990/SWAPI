@@ -1,0 +1,25 @@
+﻿@model SWAPI.ViewModels.Result
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "_Layout";
+}
+<h2>Details</h2>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Director</th>
+        <th>Producer</th>
+        <th>Release date</th>
+        <th>Ranking</th>
+    </tr>
+    <tr>
+        <th>@Model.Title</th>
+        <th>@Model.Director</th>
+        <th>@Model.Producer</th>
+        <th>@Model.Release_Date</th>
+        <th>@Model.Ranking</th>
+    </tr>
+</table>
+
+@Html.ActionLink("List of films", "Films")

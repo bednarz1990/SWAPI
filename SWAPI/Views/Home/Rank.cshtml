@@ -1,0 +1,31 @@
+﻿@model SWAPI.ViewModels.Result
+
+@{
+    ViewBag.Title = "Ranking";
+    Layout = "_Layout";
+}
+<h2>Rateing</h2>
+<table>
+    <tr>
+        <th>Title</th>
+    </tr>
+    <tr>
+        <th>@Model.Title</th>
+    </tr>
+</table>
+
+<h2>Rate a movie</h2>
+@for (var i = 0; i <= 10; i++)
+
+{
+    <a> @Html.ActionLink($"{i} ", "Rate", new {id = Model.Episode_Id, rate = i})</a>
+}
+<style>
+    a {
+        margin: 5px;
+        text-decoration: none;
+        transition: color 1s;
+    }
+
+    a:hover { color: #ff0000; }
+</style>
