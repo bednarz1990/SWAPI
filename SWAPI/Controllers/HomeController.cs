@@ -24,6 +24,7 @@ namespace SWAPI.Controllers
         public IActionResult Films()
         {
             // TODO Logging
+            // TODO add JS framework and CSS framework
             var result = _swapiService.GetAllFilms().Result;
             return View(result);
         }

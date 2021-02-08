@@ -1,12 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using SWAPI.Data;
 using SWAPI.Services.Interfaces;
 using SWAPI.ViewModels;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SWAPI.Services
 {

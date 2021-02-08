@@ -7,7 +7,7 @@ namespace SWAPI.Data
         public SwapiContext(DbContextOptions<SwapiContext> options) : base(options)
         {
         }
-
+        
         public DbSet<Film> Films { get; set; }
     }
 }
